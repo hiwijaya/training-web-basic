@@ -5,29 +5,94 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <style>
+            @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
             *{
-                color: white;
+                font-family: 'PT Sans', sans-serif;
+                color: #252626;
+                font-size: 18px;
+                margin: 0;
+                padding: 0;
             }
             .container {
                 display: flex;
                 display: -webkit-flex;
                 flex-direction: column;
+                height: 100vh;                  /* persentate of viewport's height.  */
             }
             .header {
-                background-color: gray;
-                text-align: center;
-                padding: 50px;
+                display: flex;
+                flex-direction: row;
+                background-color: #3E4348;
+                height: 80px;
+                justify-content: flex-start;
+                align-items: center;            /* align the flex items vertically */
+                margin: 10px;
+            }
+            .header a {
+                color: #EDF4FC;
+                margin: 20px;
+                text-decoration: none;
+            }
+            .header .title {
+                font-size: 28px;
+                color: #EDF4FC;
+                font-weight: 700;
+                margin:20px;
+            }
+            .header .logout {
+                margin-left: auto;
+            }  
+
+            .content-box {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                margin: 0 10px;
+            }
+            .sidebar {
+                font-size: 20px;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #E4E4E4;
+                width: 300px;
+                margin-right: 10px;
+            }
+            .content {
+                background-color: #F4F7F6;
+                flex: 1;
+            }
+
+            .footer {
+                font-size: 20px;
+                color: #EDF4FC;
+                font-weight: 700;
+                background-color: #3E4348; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
+                margin: 10px;
             }
         </style>
 
     </head>
     <body>
         <div class="container">
-            <div class="header">HEADER</div>
-            <div>NAVIGATION MENU</div>
-            <div>SIDEBAR</div>
-            <div>CONTENT</div>
-            <div>FOOTER</div>
+            <div class="header">
+                <div class="title">HEADER</div>
+                <a href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#" class="logout">Logout</a>
+            </div>
+            
+            <div class="content-box">
+                <div class="sidebar">SIDEBAR</div>
+                <div class="content">CONTENT</div>
+            </div>
+
+            <div class="footer">FOOTER</div>
         </div>
         
     </body>
